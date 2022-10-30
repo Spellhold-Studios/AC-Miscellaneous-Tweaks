@@ -1,0 +1,62 @@
+STRING_SET
+9556 @2000712 // Fighter
+9557 @2000713 // Ranger
+9558 @2000714 // Paladin
+45896 @2000769 // Barbarian
+9559 @2000715 // Cleric
+9560 @2000716 // Druid
+45867 @2000717 // Monk
+9563 @2000718 // Mage
+9564 @2000719 // Abjurer
+9565 @2000720 // Conjurer
+9566 @2000721 // Diviner
+9567 @2000722 // Enchanter
+9568 @2000723 // Illusionist
+9569 @2000724 // Invoker
+9570 @2000725 // Necromancer
+9571 @2000726 // Transmuter
+54892 @2000727 // Wild Mage
+45866 @2000728 // Sorcerer
+9561 @2000729 // Thief
+9562 @2000730 // Bard
+25201 @2000731 // Berserker
+25203 @2000732 // Wizard Slayer
+25204 @2000733 // Kensai
+25209 @2000734 // Archer
+25211 @2000735 // Stalker
+25212 @2000736 // Beast Master
+25206 @2000737 // Cavalier
+25207 @2000738 // Inquisitor
+25208 @2000739 // Undead Hunter
+25221 @2000740 // Priest of Talos
+25222 @2000741 // Priest of Helm
+25223 @2000742 // Priest of Lathander
+25224 @2000743 // Totemic Druid
+25225 @2000744 // Shapeshifter
+25227 @2000745 // Avenger
+25213 @2000746 // Assassin
+25215 @2000747 // Bounty Hunter
+25216 @2000748 // Swashbuckler
+25217 @2000749 // Blade
+25220 @2000750 // Skald
+25219 @2000751 // Jester
+9573 @2000752 // Fighter/Cleric
+9574 @2000753 // Fighter/Mage
+9572 @2000754 // Fighter/Thief
+9579 @2000755 // Fighter/Druid
+9575 @2000756 // Mage/Thief
+9578 @2000757 // Cleric/Thief
+9577 @2000758 // Cleric/Mage
+9580 @2000759 // Cleric/Ranger
+9581 @2000760 // Fighter/Mage/Cleric
+9576 @2000761 // Fighter/Mage/Thief
+9550 @2000762 // Humans
+9552 @2000763 // Elves
+9555 @2000764 // Half-Elves
+9551 @2000765 // Dwarves
+9553 @2000766 // Gnomes
+9554 @2000767 // Halflings
+53191 @2000768 // Half-Orcs
+USING "Miscellaneous/tra/en_US/classes.tra"
+
+END

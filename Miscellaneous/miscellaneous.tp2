@@ -1,0 +1,332 @@
+//__________________________________________________________________________________________________________
+//
+//	Initial setup
+//__________________________________________________________________________________________________________
+
+
+BACKUP ~weidu_external/backup/miscellaneous~
+AUTHOR ~ac86public@gmail.com~
+VERSION ~v1.24~
+
+MODDER setup_tra        ~FAIL~
+       area_variables   ~FAIL~
+       missing_extern   ~FAIL~
+       missing_resref   ~FAIL~
+       ict2_actions     ~FAIL~
+       missing_eval     ~FAIL~
+       overwriting_file ~NONE~
+
+LANGUAGE ~English~ ~en_US~ ~Miscellaneous/tra/en_US/setup.tra~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Miscellaneous Tweaks				      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @1             // ~Miscellaneous Tweaks~
+DESIGNATED 100 LABEL "ac-miscellaneous-misctweaks"
+
+INCLUDE ~Miscellaneous/install/ac_macros.tph~
+
+LAUNCH_ACTION_MACRO ~Locations~
+
+LOAD_TRA ~Miscellaneous/tra/en_US/eedescrip.tra~
+INCLUDE ~Miscellaneous/install/ac_miscellany.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// BG Portraits					      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @9             // ~Restore BG1 portraits and colors for all~
+SUBCOMPONENT @8      // ~Use BG/SOD Portraits in SoA/ToB~
+DESIGNATED 201 LABEL "ac-miscellaneous-bgportraits"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @6       // ~This component is not required for BG1/BG:EE installations.~
+
+INCLUDE ~Miscellaneous/install/ac_portraitsall.tph~
+
+
+BEGIN @10            // ~Restore BG1 portraits and colors; SOD for Imoen~
+SUBCOMPONENT @8      // ~Use BG/SOD Portraits in SoA/ToB~
+DESIGNATED 202 LABEL "ac-miscellaneous-sodimoen"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @6       // ~This component is not required for BG1/BG:EE installations.~
+
+INCLUDE ~Miscellaneous/install/ac_portraitsimmy.tph~
+
+
+BEGIN @11            // ~Restore BG1 portraits and colors; SOD for Viconia~
+SUBCOMPONENT @8      // ~Use BG/SOD Portraits in SoA/ToB~
+DESIGNATED 203 LABEL "ac-miscellaneous-sodviccy"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @6       // ~This component is not required for BG1/BG:EE installations.~
+
+INCLUDE ~Miscellaneous/install/ac_portraitsviccy.tph~
+
+
+BEGIN @12            // ~Restore BG1 portraits and colors; SOD for Imoen and Viconia~
+SUBCOMPONENT @8      // ~Use BG/SOD Portraits in SoA/ToB~
+DESIGNATED 204 LABEL "ac-miscellaneous-sodviccimoen"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @6       // ~This component is not required for BG1/BG:EE installations.~
+
+INCLUDE ~Miscellaneous/install/ac_portraitssod.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE Portraits                          	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @30           // ~EE Character Portraits for SoA/ToB and BGT~
+DESIGNATED 1300 LABEL "ac-portraits-ee"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @31       // ~This component requires either SoA/ToB or BGT.~
+
+COPY ~Miscellaneous/portraits_ee~ ~portraits~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE Soundsets                        	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @25           // ~EE Soundsets for BGT~
+DESIGNATED 1200 LABEL "ac-ee-soundsets"
+REQUIRE_PREDICATE GAME_IS ~bgt~ @19       // ~This component requires BGT.~
+REQUIRE_COMPONENT ~tobex.tp2~ ~100~ @26   // ~This component requires ToBEx Core.~
+REQUIRE_PREDICATE FILE_EXISTS   ~tobex_ini/tobexcore.ini~ &&
+                  FILE_CONTAINS ~tobex_ini/tobexcore.ini~ ~Soundset Subtitles=1~ @27       // ~This component requires that Soundset Subtitles be set to 1 in ToBExCore.ini~
+
+COPY ~Miscellaneous/Soundsets~ ~sounds~
+LOAD_TRA ~Miscellaneous/tra/en_US/soundsets.tra~
+INCLUDE ~Miscellaneous/install/ac_soundsets.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE NPC Portraits				      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @13            // ~Use original portraits for EE NPCs~
+DESIGNATED 300 LABEL "ac-miscellaneous-eeportraits"
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @14          // ~This component is only compatible with EE games.~
+
+INCLUDE ~Miscellaneous/install/ac_portraits_ee.tph~
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~glint7.cre~) THEN BEGIN
+       COPY_EXISTING ~glint7.cre~ ~override~
+              WRITE_BYTE 0x32 95
+       BUT_ONLY
+END
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// SoD Soundsets for BG:EE      		      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @37     // ~Pure SoD soundset~   
+SUBCOMPONENT @35     // ~SoD soundset for BG:EE~
+DESIGNATED 1600 LABEL "ac-sod-soundsets-pure"
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~ AND FILE_EXISTS_IN_GAME ~bdbalquo.cre~) @36       // ~This component requires Siege of Dragonspear.~
+
+INCLUDE ~Miscellaneous/install/ac_sodsounds_pure.tph~
+
+BEGIN @38     // ~Mixed SoD/BG:EE soundset~
+SUBCOMPONENT @35     // ~SoD soundset for BG:EE~
+DESIGNATED 1700 LABEL "ac-sod-soundsets-mixed"
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~ AND FILE_EXISTS_IN_GAME ~bdbalquo.cre~) @36       // ~This component requires Siege of Dragonspear.~
+
+INCLUDE ~Miscellaneous/install/ac_sodsounds_mixed.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE NPC Colors					      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @7             // ~Use EE colors for joinable NPCs~
+DESIGNATED 400 LABEL "ac-miscellaneous-eecolors"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @3             // ~This component is not required for EE games.~
+REQUIRE_PREDICATE MOD_IS_INSTALLED "1pp.tp2" (ID_OF_LABEL "1pp.tp2" "1pp_extended_palette_entries_full") @15       // ~This component requires 1PP Extended Palette Entries.~
+
+INCLUDE ~Miscellaneous/install/ac_eecolors.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE Style Descriptions				      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @2             // ~EE-style descriptions~
+DESIGNATED 500 LABEL "ac-miscellaneous-eedescriptions"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @3       // ~This component is not required for EE games.~
+
+LOAD_TRA ~Miscellaneous/tra/en_US/eedescrip.tra~
+INCLUDE ~Miscellaneous/install/ac_eedescrip.tph~
+
+LOAD_TRA ~Miscellaneous/tra/en_US/classes.tra~
+INCLUDE  ~Miscellaneous/install/ac_classes.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// EE Slings                             	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @29           // ~EE Slings~
+DESIGNATED 1400 LABEL "ac-ee-slings"
+REQUIRE_PREDICATE GAME_IS ~bgt~ @19       // ~This component requires BGT.~
+
+INCLUDE ~Miscellaneous/install/ac_bgslings.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// BG Archery					      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @5             // ~BG-style archery for SoA/ToB~
+DESIGNATED 600 LABEL "ac-miscellaneous-bgarchery"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt bgee bg2ee eet~ @6    // ~This component is not required for BG1 installations.~
+
+LOAD_TRA ~Miscellaneous/tra/en_US/archdescr.tra~
+INCLUDE ~Miscellaneous/install/ac_bgarchery.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// BG Icons & Colors				      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @16             // ~Restore BG/BGII inventory icons and colors.~
+DESIGNATED 700 LABEL "ac-miscellaneous-bgiconscolors"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt~ @17    // ~This component is not meant for the Enhanced Editions.~
+
+INCLUDE ~Miscellaneous/install/ac_macros.tph~
+
+LAUNCH_ACTION_MACRO ~Locations~
+              
+INCLUDE ~Miscellaneous/install/ac_itemsarmor.tph~
+INCLUDE ~Miscellaneous/install/ac_itemshelm.tph~
+INCLUDE ~Miscellaneous/install/ac_itemsshield.tph~
+INCLUDE ~Miscellaneous/install/ac_itemswpn.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// BG Flaming Fist & Amnian Soldiers		      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @18             // ~Restore BG Flaming Fist & Amnian Soldier appearance.~
+DESIGNATED 800 LABEL "ac-miscellaneous-bgflaming"
+REQUIRE_PREDICATE GAME_IS ~bgt~ @19       // ~This component requires BGT.~
+REQUIRE_COMPONENT ~setup-infinityanimations.tp2~ ~0~ @21    // ~This component requires Infinity Animations.~
+
+INCLUDE ~Miscellaneous/install/ac_flamingamnian.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Dragon Breath Fix                        	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @23           // ~Dragon Breath Fix~
+DESIGNATED 1100 LABEL "ac-miscellaneous-breathfix"
+REQUIRE_PREDICATE GAME_IS ~soa tob bgt bg2ee eet~ @24       // ~This component requires either SoA/ToB, BGT, or EET.~
+
+INCLUDE ~Miscellaneous/install/ac_breath.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Random Stuff                        	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @22           // ~Random Stuff No-one Wants~
+DESIGNATED 1000 LABEL "ac-miscellaneous-random"
+REQUIRE_PREDICATE GAME_IS ~bgt bgee bg2ee eet~ @34       // ~This component requires either BGT, BG:EE, BG2:EE, or EET.~
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ || ((GAME_IS ~bgt~) && (MOD_IS_INSTALLED ~1pp.tp2~ (ID_OF_LABEL "1pp.tp2" "1pp_extended_palette_entries_full")))  @15 // ~This component requires 1PP Extended Palette Entries.~
+
+INCLUDE ~Miscellaneous/install/ac_macros.tph~
+
+LAUNCH_ACTION_MACRO ~Locations~
+
+LOAD_TRA ~Miscellaneous/tra/en_US/eedescrip.tra~
+
+INCLUDE ~Miscellaneous/install/ac_random.tph~
+
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Revenant Animation Fix                    	      \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @32           // ~Revenant Animation Fix~
+DESIGNATED 1500 LABEL "ac-ee-revenant"
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @14          // ~This component is only compatible with EE games.~
+
+COPY_EXISTING_REGEXP GLOB ~.*\.cre~ ~override~
+       READ_STRREF 0x8 name
+              PATCH_IF (~%name%~ STR_EQ ~Revenant~) BEGIN
+                     WRITE_LONG 0x28 0x7701
+              END
+              BUT_ONLY
+
+COPY_EXISTING ~7701.INI~ ~override~
+       REPLACE_TEXTUALLY ~attack=ghoul03,blank,blank~ ~attack=~
+       REPLACE_TEXTUALLY ~damage=ghoul08~ ~damage=reven08~
+       REPLACE_TEXTUALLY ~die=ghoul09~ ~die=reven09~
+       REPLACE_TEXTUALLY ~attack_slash=ghoul05,blank,blank~ ~attack_slash=reven05~
+       REPLACE_TEXTUALLY ~attack_slash_frame=2,0,0~ ~attack_slash_frame=2~ 
+       REPLACE_TEXTUALLY ~attack_backslash=ghoul06,blank,blank~ ~attack_backslash=reven06~
+       REPLACE_TEXTUALLY ~attack_backslash_frame=2,0,0~ ~attack_backslash_frame=2~
+       REPLACE_TEXTUALLY ~attack_jab=~ ~attack_jab=reven05~
+       REPLACE_TEXTUALLY ~attack_jab_frame=0~ ~attack_jab_frame=2~
+       REPLACE_TEXTUALLY ~battle_cry=ghoul03,ghoul04~ ~battle_cry=reven03,reven04~
+       REPLACE_TEXTUALLY ~selection=ghoul03~ ~selection=reven01,reven02~
+       REPLACE_TEXTUALLY ~selection_frame=0~ ~selection_frame=0,0~

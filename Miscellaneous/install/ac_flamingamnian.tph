@@ -1,0 +1,54 @@
+// Restore BG Sprites for Flaming Fist and Amnian Soldiers
+
+	COPY_EXISTING_REGEXP GLOB ~.*\.cre~ ~override~
+	READ_STRREF 0x8 name
+
+	 PATCH_IF (~%name%~ STR_EQ ~Flaming Fist Mercenary~) BEGIN
+	  	WRITE_LONG 0x28 ~25616~   	// Cleric Male Human
+     END
+
+	 PATCH_IF (~%name%~ STR_EQ ~Flaming Fist Enforcer~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	   END
+	
+	 PATCH_IF (~%name%~ STR_EQ ~Flaming Fist Scout~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	   END
+
+	 PATCH_IF (~%name%~ STR_EQ ~Flaming Battle Wizard~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	   END
+	
+	PATCH_IF (~%name%~ STR_EQ ~Fergus~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	END
+
+	PATCH_IF (~%name%~ STR_EQ ~Dilos~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	END
+
+	PATCH_IF (~%name%~ STR_EQ ~Caedmon~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	END
+
+	PATCH_IF (~%name%~ STR_EQ ~Sorrel~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	END
+	
+	PATCH_IF (~%name%~ STR_EQ ~Bill~) BEGIN
+		WRITE_LONG 0x28 ~25616~ 	// Cleric Male Human
+	END
+
+	PATCH_IF (~%name%~ STR_EQ ~Officer Vai~) BEGIN
+		WRITE_LONG 0x28 ~0x6411~ 	// Cleric Female Human
+	   END
+
+	PATCH_IF (~%name%~ STR_EQ ~Laola Axehand~) BEGIN
+		WRITE_LONG 0x28 ~0x6411~ 	// Cleric Female Human
+	END
+
+	 PATCH_IF (~%name%~ STR_EQ ~Amnish Soldier~) BEGIN
+		WRITE_LONG 0x28 ~25632~ 	// Fighter Male Human
+	END
+
+BUT_ONLY

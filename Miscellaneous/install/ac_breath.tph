@@ -1,0 +1,56 @@
+// Dragon Breath Fix
+
+  // Green Dragon Breath
+
+COPY_EXISTING ~drgrbrht.spl~ ~override~
+	WRITE_LONG 0x25 0
+BUT_ONLY
+
+  // Yellow Dragon Scorching Sand
+
+COPY_EXISTING ~spin595.spl~ ~override~
+	WRITE_LONG 0x25 0
+  WRITE_LONG 0x27 0
+BUT_ONLY
+
+  // Blue Dragon Lightning Breath
+
+COPY_EXISTING ~spin597.spl~ ~override~
+  WRITE_LONG 0x10 0   // remove invocation casting sound
+  WRITE_LONG 0x22 0   // remove invocation casting animation
+  WRITE_LONG 0x1c 4   // set to spell type: innate
+	WRITE_LONG 0x25 0   // set to school: none
+  WRITE_LONG 0x84 0   // set casting speed to zero
+LPF ALTER_EFFECT INT_VAR power = 0 resist_dispel = 0 END
+BUT_ONLY
+
+  // Black Dragon Breath
+
+COPY_EXISTING ~spin691.spl~ ~override~
+  WRITE_LONG 0x25 0
+BUT_ONLY
+
+  // Silver Dragon Cone of Cold
+
+COPY_EXISTING ~spin833.spl~ ~override~
+  WRITE_LONG 0x25 0
+BUT_ONLY
+
+  // Silver Dragon Paralyzation
+
+COPY_EXISTING ~spin832.spl~ ~override~
+  WRITE_LONG 0x25 0
+BUT_ONLY
+
+  // Shadow Dragon Paralyzation
+
+COPY_EXISTING ~spin893.spl~ ~override~
+  WRITE_LONG 0x25 0
+BUT_ONLY
+
+  // Red Dragon Breath
+
+COPY_EXISTING ~spin693.spl~ ~override~
+  WRITE_LONG 0x25 0
+BUT_ONLY
+

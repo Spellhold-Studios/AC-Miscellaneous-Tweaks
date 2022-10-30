@@ -1,0 +1,25 @@
+// BG Slings 
+// Restore BG Sling behavior
+
+    // Add STR modifier to damage rolls to all slings
+
+    COPY_EXISTING_REGEXP GLOB ~slng.*.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR flag_strength = 1 END
+    BUT_ONLY
+
+    // Change Sling of Seeking to EE behavior and description
+
+    LOAD_TRA ~Miscellaneous/tra/en_US/eedescrip.tra~
+
+    COPY_EXISTING ~slng07.itm~ ~override~
+      SAY IDENTIFIED_DESC @2000799
+      LPF ALTER_ITEM_HEADER INT_VAR 
+        new_header_type = 2
+        dicenumber = 1
+        dicesize = 4
+        damage_bonus = 2
+        projectile = 20
+        flag_strength = 1
+      END
+    BUT_ONLY
+

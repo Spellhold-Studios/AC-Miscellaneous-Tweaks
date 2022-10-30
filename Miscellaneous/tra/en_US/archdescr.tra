@@ -1,0 +1,619 @@
+ @3000001 = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility and makes arrows fired from this bow deliver more damage. These were developed after the normal longbow.
+
+STATISTICS:
+
+THAC0: +1
+Damage: +2 (missile)
+Speed Factor: 7
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 10
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief
+ Bard~
+  @3000002 = ~The longbow is similar to the shortbow, except that the staff is about as tall as the archer is - usually six to six-and-a-half feet. It has better range and accuracy than the shortbow, but a slower Speed Factor.
+
+STATISTICS:
+
+THAC0: +1
+Speed Factor: 7
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 3
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+  @3000003 = ~Shortbows were the first bows to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. Shortbow staves are about five feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the longbow.
+
+STATISTICS:
+
+Speed Factor: 6
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+ @3000004 = ~Composite bows are longbows or shortbows whose staves are made from more than one type of material. This gives greater flexibility and makes arrows fired from this bow deliver more damage. These were developed after the normal longbow.
+
+STATISTICS:
+
+THAC0: +2
+Damage: +3 (missile)
+Speed Factor: 6
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 9
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000005 = ~The longbow is similar to the shortbow, except that the staff is about as tall as the archer is - usually six to six-and-a-half feet. It has better range and accuracy than the shortbow, but a slower Speed Factor. This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+THAC0: +2
+Damage: +1 (missile)
+Speed Factor: 6
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 3
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000006 = ~Shortbows were the first bows to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. This is a magical shortbow, giving the user an additional +1 to hit.
+
+STATISTICS:
+
+THAC0: +1
+Damage: +1 (missile)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Bard~
+   @3000007 = ~Longbow of Marksmanship: The Dead Shot
+Driven by years of rivalry, the Dukes of Spandeliyon and Delthuntle decided to organize a private contest that would proclaim the better Archer between them. Both boasted the power of their magical bows, but that wasn't enough for Edwall Dest, Duke of Spandeliyon. He arranged for the theft of his opponent's bow, and on the day of the contest, he couldn't help gloat in his advantage. The Duke of Delthuntle, known only as Raymond, demanded a demonstration of Edwall's skill on a scarecrow that he had placed. Edwall Dest drew his longbow and released the arrow with determination, not stopping to think how uncannily the target resembled himself. The missile split the large voodoo doll's head in twain, and at that moment Edwall's head did much the same.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000008 = ~Eagle Bow: Protector of the Dryads 
+In order to protect their community from an encroaching orc logging encampment, the hero Hannable the White was given this magnificent bow by the dryads of Gulthmere Forest. A deadly confrontation followed when the loggers dared to try and cut down a great oak tree, nearly killing the dryad linked to it. With the help of powerful forest animals, Hannable slew entire bands of orcs before any more damage was inflicted upon the wood. The orcs were forced to abandon their plans lest they suffer the continued wrath of Hannable and the forest. Needless to say, the hero who aided the grateful dryads lived happily... nay, VERY happily ever after!
+
+STATISTICS:
+
+THAC0: +2
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+    @3000009 = ~This composite longbow was one of many made by a half-elven craftsman whose name has been lost to history. At one time there were several hundred in use, a favorite of scouts who patrolled the Anauroch desert, but many have been lost or destroyed. Only a few are still known to exist, and they see little use due to the tremendous strength they require. 
+
+STATISTICS:
+
+THAC0: +3
+Damage: +4 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 8
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000010 = ~Legends say that craftsman Pinn O'Reffen fashioned this bow from the heart of a treant, though how he came to possess such material is unknown. He certainly did not anticipate the enchantment within, magic that makes the archer's aim almost infallible for a short period every day. Pinn claimed his skill was responsible, but it is more likely that some aspect of the soul of the treant is still within the wood. This bow requires a Strength of 18 to use.
+
+STATISTICS:
+
+Charge abilities:
+- Aim: +7 to hit once per day
+  Duration: 9 seconds
+
+THAC0: +4
+Damage: +5 (missile)
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 7
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000011 = ~This massive bow was the property of the ranger Bearpaw, who reportedly received it from a strangely benevolent ogre. The reason for the gift was never discussed, but he earned the respect of everyone he met, and likely befriended the creature while patrolling the Cloakwood Forest. Bearpaw could draw back the bow without the slightest effort, but when he died it was bequeathed to his wife and sons, and not a one could draw the string even halfway. They eventually sold it to a merchant heading south.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +4 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 19 Strength
+
+Weight: 8
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000012 = ~This yew bow is more a work of art than a weapon of war: Fine engravings dance over the polished wood, and the bowstring gleams of gold, almost singing when drawn. This was a ceremonial bow in the Elven Court for a thousand years, though that is scarcely a single lifetime in elven terms. Every 50 years or so it was granted to someone who had performed a great service, the recipient eventually choosing who would hold it next. Two centuries ago, a human, Yin Pon, rescued an elven prince and was gifted the bow, which he carried with him to Baldur's Gate, where it was subsequently lost.
+
+STATISTICS:
+
+THAC0: +4
+Damage: +3 (missile)
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000013 = ~Kestsa was given this longbow many years ago by the Cowled Wizards as reward for his exemplary service in the Athkatla city guard. He was tireless in bringing to justice those who unlawfully used magic. The bow served him well in his cause, granting resistance to damage from arcane energy. 
+ 
+STATISTICS:
+
+Equipped abilities:
+- Magic Damage Resistance: +20%
+
+THAC0: +5
+Damage: +4 (missile)
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000014 = ~The Tuigans are a nomadic people widely dispersed across the steppe regions of Faerun but bound together by a common bloodline. The bows they make are specially tailored for their mobile warriors, and the process used is carefully guarded, but the result is well known: Any bow of Tuigan origin can be fired faster than is possible with a normal one.
+
+STATISTICS:
+
+Combat abilities:
+- 3 shots per round
+
+THAC0: +1
+Damage: +1 (missile)
+Speed Factor: 5
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000015 = ~The thin, frayed string of this bow appears unusable, but when it is drawn, a solid but invisible arrow becomes tangible. The lich Tansheron gave this bow to his Watcher, the guardian of his keep who stood atop a tower with neither entrance nor exit. When anyone approached, down would fall a never-ending rain of phantom arrows until they were dead or fled. How this bow was wrested from the Watcher's hand is not known, but would probably make a great tavern story.
+
+Note: Avoid equipping normal arrows on your character, else the bow will fire these instead of the phantom arrows.
+
+STATISTICS:
+
+Combat abilities:
+- When no arrows are equipped, the bow fires missiles that are treated as +3 for the purposes of determining what enemies they can damage. The missiles receive +3 to hit, including the bonus listed below, and deal a total of 1d6 missile damage
+
+THAC0: +3
+Damage: +3 (missile)
+Speed Factor: 3
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000016 = ~This longbow is marked with the seal of a sunburst. It probably once was a bow used by guards in the service of the god Amaunator. These guards would use the enchanted bows to keep the priests of that long-dead faith safe. Few of these bows still exist, so they are sought after by many archers looking to improve both their accuracy and their lethality. This bow requires a Strength of 18 to use.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +4 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 8
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Bard~
+   @3000017 = ~The longbow is similar to the shortbow, except that the staff is about as tall as the archer is - usually six to six-and-a-half feet. It has better range and accuracy than the shortbow, but a slower Speed Factor. The smooth staff of this bow is warm to the touch, just a hint of the energy that surges through the wood.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 5
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 3
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000018 = ~Shortbows were the first bows to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. This shortbow is the rival of any of the larger bows. The magic inherent within it, whether from the wood or the spellcasting of a mage, makes this bow more accurate than a normal bow.
+
+STATISTICS:
+
+THAC0: +2
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000019 = ~The finest bow crafted by Gesen Khan, this weapon draws energy from another plane, firing spears of lightning instead of arrows... and therefore never requiring ammunition of any kind. It is said that Gesen prepared to retire from his craft after selling the invaluable weapon, only to have the bow wrested from his grasp by a thief who used it to end Gesen's own life. A side effect of the bow bestows protection from electricity upon the user.
+
+STATISTICS:
+
+Equipped abilities:
+- Electrical Resistance: +20%
+
+Combat abilities:
+- When no arrows are equipped, the bow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The missiles receive +4 to hit including the bonus listed below, and deal a total of 2 piercing and 1d8 electrical damage
+
+THAC0: +4
+Damage: +4 piercing, +1d8 electrical
+Speed Factor: 4
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000020 = ~Through arcane sorcery, the contradictory elements of fire and ice have been combined within this magnificent shortbow.
+
+STATISTICS:
+
+Equipped abilities:
+- Cold Resistance: +5%
+- Fire Resistance: +5%
+
+Charge abilities:
+- Improved Haste once per day
+  Duration: 3 rounds
+  Area of Effect: The user
+  
+THAC0: +4
+Damage: +4 (missile)
+Speed Factor: 2
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000021 = ~The magical bowstring of Gond makes even this strongly enchanted shortbow more accurate and powerful.
+
+STATISTICS:
+
+Equipped abilities:
+- Cold Resistance: +5%
+- Fire Resistance: +5%
+
+Charge abilities:
+- Improved Haste once per day
+  Duration: 3 rounds
+  Area of Effect: The user
+  
+THAC0: +5
+Damage: +5 (missile)
+Speed Factor: 1
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000022 = ~Taralash was a hunter renowned for his ability to track down even the fleetest of quarry by foot. Few animals ever escaped once he had them in the sights of his mighty longbow.
+
+STATISTICS:
+
+Equipped abilities:
+- Movement rate increased by 2 (base is 9)
+
+THAC0: +5
+Damage: +4 (missile)
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000023 = ~Taralash was a hunter renowned for his ability to track down even the fleetest of quarry by foot. Few animals ever escaped once he had them in the sights of his mighty longbow.
+
+STATISTICS:
+
+Equipped abilities:
+- Movement rate increased by 2 (base is 9)
+
+THAC0: +6
+Damage: +5 (missile)
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000025 = ~This longbow is marked with the seal of a sunburst. It probably once was a bow used by guards in the service of the god Amaunator. These guards would use the enchanted bows to keep the priests of that long dead faith safe. Few of these bows still exist, so they are sought after by many archers looking to improve both their accuracy and their lethality. This bow requires a Strength of 18 to use.
+
+STATISTICS:
+
+THAC0: +4
+Damage: +5 (missile)
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 18 Strength
+
+Weight: 7
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief
+ Bard~
+   @3000026 = ~The longbow is similar to the shortbow, except that the staff is about as tall as the archer is - usually six to six-and-a-half feet. It has better range and accuracy than the shortbow, but a slower Speed Factor. The smooth staff of this bow is warm to the touch, just a hint of the energy that surges through the wood.
+
+STATISTICS:
+
+THAC0: +4
+Damage: +3 (missile)
+Speed Factor: 4
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+   @3000027 = ~Shortbows were the first bows to be developed, although they were not called such. This is more of a default term that refers to anything which is not a longbow. This shortbow is the rival of any of the larger bows. The magic inherent within it, whether from the wood or the spellcasting of a Mage, makes this bow more accurate than a normal bow.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +3 (missile)
+Speed Factor: 3
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 3 Strength
+
+Weight: 1
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+   @3000028 = ~This enchanted bow has been in Mazzy Fentan's possession for several years, given to her by her god, Arvoreen. It is usable only by halflings, granting a +2 bonus to hit rolls.
+
+STATISTICS:
+
+THAC0: +2
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Shortbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+     @3000029 = ~The flight arrow, as its name implies, is built for distance. These are lightweight arrows and are often used for hunting. Most of these arrows are made of ash or birch and are thirty to forty inches long.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d6+1 (missile)
+Launcher: Bow
+
+Weight: 0~
+  @3000030 = ~This arrow is coated in acid. When it strikes an enemy, it not only pierces flesh but also eats it away, enlarging and deepening the wound.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d6+1, +2d6 acid damage
+Damage type: Missile
+Launcher: Bow
+
+Weight: 0~
+  @3000031 = ~This is a magical arrow that will burst into flames as it is fired at an enemy. The effect is similar to an arrow doused in oil and set to flame.
+
+STATISTICS:
+
+Damage: 1d6, +1d6 fire damage (Save vs. Spell for none)
+Damage type: Missile
+Launcher: Bow
+
+Weight: 0~
+  @3000032 = ~This arrow is magically enhanced so as to burst into a rolling ball of ice and cold when fired. When the arrow strikes its victim, a shock of cold will travel through its body, both burning and numbing to the very core.
+
+STATISTICS:
+
+Damage: 1d6, +1d6 cold damage
+Damage type: Missile
+Launcher: Bow
+
+Weight: 0~
+  @3000033 = ~This arrow is long and thin, imbued with magical properties that allow it to "push" itself through armor, striking out towards the heart of the victim.
+
+STATISTICS:
+
+THAC0: +4
+Damage: 1d6, +6 piercing damage (Save vs. Death for none)
+Damage type: Missile
+Launcher: Bow
+
+Weight: 0~
+  @3000034 = ~These arrows were enhanced through magical means when they were created. They appear slightly straighter than the average arrow, almost alive as they effortlessly leave your bow and streak toward their target with deadly accuracy.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d6+2 (missile)
+Launcher: Bow
+
+Weight: 0~
+    @3000035 = ~These enchanted missiles far surpass the craftsmanship of any arrow, magical or otherwise, you have ever seen. 
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d6+3 (missile)
+Launcher: Bow
+
+Weight: 0~

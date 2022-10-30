@@ -1,0 +1,516 @@
+// Miscellaneous Tweaks
+// DESIGNATED 100 LABEL "ac-miscellaneous-misctweaks"
+
+COPY ~Miscellaneous/icons~ ~override~
+
+
+  // Update Enrage ability icon to its dedicated "enrage" icon
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~spcl321.spl~) THEN BEGIN
+    COPY_EXISTING ~spcl321.spl~ ~override~
+  LPF ALTER_SPELL_HEADER STR_VAR icon = "enrageb" END
+BUT_ONLY
+END
+
+
+  // Update Marek's Potion of Antidote's icon
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~potn47.itm~) THEN BEGIN
+    COPY_EXISTING ~potn47.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+      WRITE_LONG  0x3E 0
+      WRITE_ASCII 0x3A ~ipotn47~
+    END
+    BUT_ONLY
+    END
+
+    
+  // Update Vial of Strange Liquid's icon
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~potn48.itm~) THEN BEGIN
+    COPY_EXISTING ~potn48.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+      WRITE_LONG  0x3E 0
+      WRITE_ASCII 0x3A ~ipotn48~
+    END
+    BUT_ONLY
+    END
+
+
+	// Change icons for SoA and ToB healing potions
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~potn52.itm~) THEN BEGIN
+    COPY_EXISTING ~potn52.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+      WRITE_ASCII 0x3A ~ipotn41b~
+      WRITE_ASCII 0x58 ~cpotn41~
+      WRITE_ASCII 0x76 ~ipotn41b~
+    END
+    BUT_ONLY
+    END
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~potn55.itm~) THEN BEGIN
+    COPY_EXISTING ~potn55.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+      WRITE_ASCII 0x3A ~ipotn05b~
+      WRITE_ASCII 0x58 ~cpotn11~
+      WRITE_ASCII 0x76 ~ipotn05b~
+    END
+    BUT_ONLY
+    END
+
+
+  // Change icons for Wand of Spell Striking, Wand of Cursing, Rod of Reversal, Rod of Absorption
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~wand19.itm~) THEN BEGIN   // Wand of Cursing
+    COPY_EXISTING ~wand19.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+        WRITE_ASCII 0x3A ~iwand04b~
+        WRITE_ASCII 0x58 ~cwand04~
+        WRITE_ASCII 0x76 ~iwand04b~
+      END
+      BUT_ONLY
+      END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~wand18.itm~) THEN BEGIN   // Wand of Spell Striking
+    COPY_EXISTING ~wand18.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+        WRITE_ASCII 0x3A ~iwand11c~
+        WRITE_ASCII 0x58 ~cwand11~
+        WRITE_ASCII 0x76 ~iwand11c~
+        WRITE_ASCII 0xAE ~iwand11c~
+      END
+      BUT_ONLY
+      END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~rods06.itm~) THEN BEGIN   // Rod of Reversal
+    COPY_EXISTING ~rods06.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+        WRITE_ASCII 0x3A ~iwand08b~
+        WRITE_ASCII 0x58 ~cwand08~
+        WRITE_ASCII 0x76 ~iwand08b~
+      END
+      BUT_ONLY
+      END
+    
+  ACTION_IF (FILE_EXISTS_IN_GAME ~rods01.itm~) THEN BEGIN   // Rod of Absorption
+    COPY_EXISTING ~rods01.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN // protects against invalid files
+        WRITE_ASCII 0x3A ~iwand09c~
+        WRITE_ASCII 0x58 ~cwand09~
+        WRITE_ASCII 0x76 ~iwand09c~
+      END
+      BUT_ONLY
+      END
+
+
+  // Change icon and color for Silver Dragon Plate
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ohdarmor.itm~) THEN BEGIN		// Silver Dragon Plate
+  COPY_EXISTING ~ohdarmor.itm~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+      WRITE_LONG  0x3E 0
+      WRITE_ASCII 0x3a ~iplat18b~
+        LAUNCH_PATCH_MACRO ~clear~
+          SET gradient = 205			// colour index
+          SET location = ablue		// location
+          LAUNCH_PATCH_MACRO ~colour~
+          SET gradient = 209			// colour index
+          SET location = ared			// location
+          LAUNCH_PATCH_MACRO ~colour~
+          SET gradient = 14			// colour index
+          SET location = agrey		// location
+          LAUNCH_PATCH_MACRO ~colour~
+          SET setr = 214
+          SET setg = 214
+          SET setb = 255
+          SET speed = 0x20	
+          SET location = ablue		// location	armor/trimming
+          LAUNCH_PATCH_MACRO ~pulse~
+          SET setr = 196
+          SET setg = 196
+          SET setb = 205
+          SET speed = 0x30			
+          SET location = ared			// location strap/leather
+          LAUNCH_PATCH_MACRO ~pulse~
+          SET setr = 181
+          SET setg = 173
+          SET setb = 239
+          SET speed = 0x40			
+          SET location = agrey		// location belt/amulet
+          LAUNCH_PATCH_MACRO ~pulse~
+    END
+    BUT_ONLY
+    END
+
+      
+  // Change icon and color for SoD Dragonscale Armor
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdleat05.itm~) THEN BEGIN		// Dragonscale Armor
+COPY_EXISTING ~bdleat05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+  WRITE_ASCII 0x3A ~ileat19b~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 73			// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 32	 		// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 73	 		// colour index
+	SET location = ared			// location
+	LAUNCH_PATCH_MACRO ~colour~
+END
+BUT_ONLY
+END
+
+
+  // Change icon and color for SoD Dragonscale Shield
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdshld05.itm~) THEN BEGIN		// Dragonscale Shield
+COPY_EXISTING ~bdshld05.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+  WRITE_ASCII 0x3A ~ileat19b~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 149			// colour index
+	SET location = sblue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 149	 		// colour index
+	SET location = steal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 73	 		// colour index
+	SET location = apink			// location
+	LAUNCH_PATCH_MACRO ~colour~
+END
+BUT_ONLY
+END
+
+
+  // Change icon and color for Chill Axe
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdax1h03.itm~) THEN BEGIN		// Chill Axe (Siege of Dragonspear)
+COPY_EXISTING ~bdax1h03.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iax1h03b~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cax1h01~
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 148				// colour index
+		SET location = wblue			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 148				// colour index
+		SET location = wred				// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 17				// colour index
+		SET location = wgrey			// location
+		LAUNCH_PATCH_MACRO ~colour~		
+		SET setr = 0
+		SET setg = 0
+		SET setb = 35
+		SET location = wblue		// location
+		LAUNCH_PATCH_MACRO ~glow~
+	END
+	BUT_ONLY
+	END
+
+
+  // Change icon for the Axe of the Unyielding
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ax1h14.itm~) THEN BEGIN		// Axe of the Unyielding +4
+COPY_EXISTING ~ax1h14.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iax1h02~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cax1h01~
+		WRITE_ASCII 0x76 ~iax1h02~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ax1h15.itm~) THEN BEGIN		// Axe of the Unyielding +5
+COPY_EXISTING ~ax1h15.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iax1h02~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cax1h01~
+		WRITE_ASCII 0x76 ~iax1h02~
+	END
+	BUT_ONLY
+	END
+
+
+  // Change icon and color for SoA Battle Axe +2
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ax1h11.itm~) THEN BEGIN		// Battle Axe +2 (SoA version)
+COPY_EXISTING ~ax1h11.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iax1h03~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cax1h01~
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 99				// colour index
+		SET location = wblue			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 22				// colour index
+		SET location = wred				// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 25				// colour index
+		SET location = wgrey			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+  
+
+  // Change icon for Martyr's Morning Star
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdblun04.itm~) THEN BEGIN		// Martyr's Morningstar
+COPY_EXISTING ~bdblun04.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iblun07b~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cblun07~
+  END
+  BUT_ONLY
+  END
+
+
+  // Change icon for Severance
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdsw1h22.itm~) THEN BEGIN		// Severance
+COPY_EXISTING ~bdsw1h22.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~isw1h02b~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~csw1h02~
+    END
+    BUT_ONLY
+    END
+
+    
+  // Change icon for Wand of Water Elemental Summoning
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdswand01.itm~) THEN BEGIN		// Wand of Water Elemental Summoning
+COPY_EXISTING ~bdwand01.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iwand10b~
+		WRITE_LONG  0x5C 0
+		WRITE_ASCII 0x58 ~cwand10~
+    END
+    BUT_ONLY
+    END
+
+
+  // Change icon for Rancor
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~sw2hd1.itm~) THEN BEGIN		// Rancor
+COPY_EXISTING ~sw2hd1.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~isw2h07b~
+    END
+    BUT_ONLY
+    END
+
+
+  // Change icon for Moonlight Walkers
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~rsboot.itm~) THEN BEGIN		// Moonlight Walkers
+COPY_EXISTING ~rsboot.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~iboot12b~
+	END
+	BUT_ONLY
+	END
+
+
+  // Change icon for Abyssal Blade
+
+  ACTION_FOR_EACH sword IN ~ohdsw2ha~ ~ohdsw2hb~ ~ohdsw2hc~ ~ohdsw2hd~ BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%sword%.itm~) THEN BEGIN		// Moonlight Walkers
+COPY_EXISTING ~%sword%.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~isw2h07b~
+      LAUNCH_PATCH_MACRO ~clear~
+        SET gradient = 255				// colour index
+        SET location = wblue			// location
+        LAUNCH_PATCH_MACRO ~colour~
+        SET gradient = 47				// colour index
+        SET location = wred				// location
+        LAUNCH_PATCH_MACRO ~colour~
+        SET gradient = 127				// colour index
+        SET location = wgrey			// location
+        LAUNCH_PATCH_MACRO ~colour~
+        SET setr = 66
+        SET setg = 39
+        SET setb = 39
+        SET speed = 0x30
+        SET location = wblue		// location
+        LAUNCH_PATCH_MACRO ~pulse~
+	    END
+	  BUT_ONLY
+	END
+  END
+
+
+    // Change icon for Shadowed Spear +2
+
+    ACTION_IF (FILE_EXISTS_IN_GAME ~bdsper01.itm~) THEN BEGIN		// Shadowed Spear +2
+    COPY_EXISTING ~bdsper01.itm~ ~override~
+      PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+        WRITE_LONG  0x3E 0
+        WRITE_ASCII 0x3a ~ispear07b~
+      END
+      BUT_ONLY
+      END
+
+
+	// Restore SoA Cloak of Mirroring
+
+ACTION_IF GAME_IS ~bg2 bgt bg2ee eet~ THEN BEGIN
+COPY_EXISTING ~clck26.itm~ ~override~
+	LPF ALTER_EFFECT	INT_VAR	check_globals = 16	match_opcode = 205	opcode = 203	END
+	LPF DELETE_EFFECT	INT_VAR	check_globals = 0	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 1	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 2	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 3	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 4	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 5	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 6	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 7	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 8	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 9	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 10	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 11	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 12	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 13	match_opcode = 206	END
+  LPF DELETE_EFFECT	INT_VAR	check_globals = 14	match_opcode = 206	END
+  SAY IDENTIFIED_DESC @2000800
+BUT_ONLY
+END
+
+
+  // Restore Algernon's Cloak infinite charges
+
+ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+  COPY_EXISTING ~clck08.itm~ ~override~
+  LPF ALTER_ITEM_HEADER INT_VAR charges = 0 END
+  BUT_ONLY
+END
+
+
+  // Resotre Bonus Item Icons
+
+  ACTION_IF GAME_IS ~bg2ee eet~ || (GAME_IS ~bg2 bgt~) && (MOD_IS_INSTALLED ~1pp.tp2~ ~0~) BEGIN
+    
+COPY_EXISTING ~wa2amu.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iamul21~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2dak.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isw1h44~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2halb.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~ihalb04~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2harp.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~imisc3m~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2amu.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iamul21~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2helm.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~ihelm17~
+    BUT_ONLY
+
+
+COPY_EXISTING ~wa2plat.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iplat05~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2ring.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iring35~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2robe.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iclck09~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2s1h.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isw1h40~
+    BUT_ONLY
+
+COPY_EXISTING ~wa2shiel.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~ishld27~
+    BUT_ONLY
+
+COPY_EXISTING ~waaxe.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iax1h01~
+    BUT_ONLY
+
+COPY_EXISTING ~wamace.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iblun21~
+    BUT_ONLY
+
+COPY_EXISTING ~waninja.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isw1h48~
+    BUT_ONLY
+
+COPY_EXISTING ~was2h.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isw2h07~
+    BUT_ONLY
+
+COPY_EXISTING ~wasling.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~islng07~
+    BUT_ONLY
+
+COPY_EXISTING ~waspear.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isper05~
+    BUT_ONLY
+
+COPY_EXISTING ~wastaff.itm~ ~override~
+  WRITE_LONG  0x3E 0
+   WRITE_ASCII 0x3a ~inpstaf~
+    BUT_ONLY
+
+COPY_EXISTING ~wastar.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~iblun15~
+    BUT_ONLY
+
+COPY_EXISTING ~wawak.itm~ ~override~
+  WRITE_LONG  0x3E 0
+  WRITE_ASCII 0x3a ~isw1h47~
+    BUT_ONLY
+
+END

@@ -1,0 +1,329 @@
+// BG Archery 
+// Restore BG Archery
+
+    // Arrow +1
+
+    COPY_EXISTING ~arow02.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 1 END
+      SAY IDENTIFIED_DESC @3000029
+    BUT_ONLY
+
+
+    // Acid Arrow
+ 
+    COPY_EXISTING ~arow04.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicenumber = 2 dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000030
+    BUT_ONLY
+
+
+    // Arrow of Fire 
+
+    COPY_EXISTING ~arow08.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000031
+    BUT_ONLY
+
+    COPY_EXISTING ~arowkc.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000031
+    BUT_ONLY
+
+    COPY_EXISTING ~arrophe2.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000031
+    BUT_ONLY
+
+
+  // Arrow of Ice 
+
+    COPY_EXISTING ~arow09.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000032
+    BUT_ONLY
+
+    COPY_EXISTING ~arow16.itm~ ~override~
+      LPF ALTER_EFFECT INT_VAR dicesize = 6 END
+      SAY IDENTIFIED_DESC @3000032
+    BUT_ONLY
+
+    
+  // Arrow +2
+
+  COPY_EXISTING ~arow11.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY IDENTIFIED_DESC @3000034
+  BUT_ONLY
+
+  COPY_EXISTING ~arow1a.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY IDENTIFIED_DESC @3000034
+  BUT_ONLY
+
+  // Arrow +3
+
+  COPY_EXISTING ~arow15.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 1 END
+    SAY IDENTIFIED_DESC @3000035
+  BUT_ONLY
+
+
+  // Composite Long Bow
+
+  COPY_EXISTING ~bow01.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY UNIDENTIFIED_DESC @3000001
+  BUT_ONLY
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow98.itm~) THEN BEGIN
+  COPY_EXISTING ~bow98.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY UNIDENTIFIED_DESC @3000001
+  BUT_ONLY
+  END
+
+
+  // Composite Long Bow +1
+
+    COPY_EXISTING ~bow02.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR thac0_bonus = 2 damage_bonus = 3 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000004
+    BUT_ONLY
+
+
+  // Long Bow +1
+
+  COPY_EXISTING ~bow04.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY UNIDENTIFIED_DESC @3000002
+    SAY IDENTIFIED_DESC @3000005
+  BUT_ONLY
+
+
+  // Short Bow +1
+
+  COPY_EXISTING ~bow06.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 1 END
+    SAY UNIDENTIFIED_DESC @3000003
+    SAY IDENTIFIED_DESC @3000006
+  BUT_ONLY
+
+
+  // Marksmanship
+
+  COPY_EXISTING ~bow07.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+    SAY UNIDENTIFIED_DESC @3000002
+    SAY IDENTIFIED_DESC @3000007
+  BUT_ONLY
+
+
+
+  // Eagle Bow
+
+    COPY_EXISTING ~bow08.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000008
+    BUT_ONLY
+ 
+
+    COPY_EXISTING ~bow99.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000008
+    BUT_ONLY
+
+
+  // Ripper +2
+
+    COPY_EXISTING ~bow09.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000009
+    BUT_ONLY
+
+
+  // Heartseeker +3
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow10.itm~) THEN BEGIN
+    COPY_EXISTING ~bow10.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 5 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000010
+    BUT_ONLY
+    END
+
+
+  // Strong Arm +2
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow11.itm~) THEN BEGIN
+    COPY_EXISTING ~bow11.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 5 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000011
+    BUT_ONLY
+    END
+
+
+  // Elven Court +3
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~bow12.itm~) THEN BEGIN
+  COPY_EXISTING ~bow12.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 3 END
+    SAY UNIDENTIFIED_DESC @3000002
+    SAY IDENTIFIED_DESC @3000012
+  BUT_ONLY
+END
+
+  // Mana Bow +4
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow13.itm~) THEN BEGIN
+    COPY_EXISTING ~bow13.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+      SAY UNIDENTIFIED_DESC @3000002
+      SAY IDENTIFIED_DESC @3000013
+    BUT_ONLY
+    END
+
+
+  // Tansheron
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow15.itm~) THEN BEGIN
+    COPY_EXISTING ~bow15.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 3 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000015
+    BUT_ONLY
+    END
+
+
+  // Composite Long Bow +2
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow16.itm~) THEN BEGIN
+    COPY_EXISTING ~bow16.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000016
+    BUT_ONLY
+    END
+
+
+  // Long Bow +2
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow17.itm~) THEN BEGIN
+    COPY_EXISTING ~bow17.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+      SAY UNIDENTIFIED_DESC @3000002
+      SAY IDENTIFIED_DESC @3000017
+    BUT_ONLY
+    END
+
+
+  // Short Bow +2
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow18.itm~) THEN BEGIN
+    COPY_EXISTING ~bow18.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000018
+    BUT_ONLY
+  END
+
+
+  // Short Bow of Gesen
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow19.itm~) THEN BEGIN
+  COPY_EXISTING ~bow19.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+    SAY UNIDENTIFIED_DESC @3000003
+    SAY IDENTIFIED_DESC @3000019
+    BUT_ONLY
+END
+
+
+  // Darkfire Bow +4
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~bow20.itm~) THEN BEGIN
+  COPY_EXISTING ~bow20.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000020
+    BUT_ONLY
+END
+    
+  // Darkfire Bow +5
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow21.itm~) THEN BEGIN
+    COPY_EXISTING ~bow21.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 5 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000021
+    BUT_ONLY
+    END
+
+
+  // Taralash +4
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow22.itm~) THEN BEGIN
+    COPY_EXISTING ~bow22.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 4 END
+      SAY UNIDENTIFIED_DESC @3000002
+      SAY IDENTIFIED_DESC @3000022
+    BUT_ONLY
+    END
+
+
+  // Taralash +5
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow23.itm~) THEN BEGIN
+    COPY_EXISTING ~bow23.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 5 END
+      SAY UNIDENTIFIED_DESC @3000002
+      SAY IDENTIFIED_DESC @3000023
+    BUT_ONLY
+    END
+
+
+  // Composite Long Bow +3
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow24.itm~) THEN BEGIN
+    COPY_EXISTING ~bow24.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 5 END
+      SAY UNIDENTIFIED_DESC @3000001
+      SAY IDENTIFIED_DESC @3000025
+    BUT_ONLY
+    END
+
+
+  // Long Bow +3
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow25.itm~) THEN BEGIN
+    COPY_EXISTING ~bow25.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 3 END
+      SAY UNIDENTIFIED_DESC @3000002
+      SAY IDENTIFIED_DESC @3000026
+    BUT_ONLY
+    END
+
+
+  // Short Bow +3
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bow26.itm~) THEN BEGIN
+    COPY_EXISTING ~bow26.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 3 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000027
+    BUT_ONLY
+END
+
+  // Short Arvoreen
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~npbow.itm~) THEN BEGIN
+    COPY_EXISTING ~npbow.itm~ ~override~
+      LPF ALTER_ITEM_HEADER INT_VAR damage_bonus = 2 END
+      SAY UNIDENTIFIED_DESC @3000003
+      SAY IDENTIFIED_DESC @3000028
+    BUT_ONLY
+    END

@@ -1,0 +1,506 @@
+// Random Stuff No-one Wants
+  
+  ACTION_IF (FILE_EXISTS_IN_GAME ~plat18.itm~) THEN BEGIN		// Red Dragon Scale
+COPY_EXISTING ~plat18.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 195			// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 		// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 198	 		// colour index
+	SET location = ared			// location
+	LAUNCH_PATCH_MACRO ~colour~
+END
+BUT_ONLY
+END
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~chan11.itm~) THEN BEGIN		// Crimson Chain Mail
+COPY_EXISTING ~chan11.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LPF DELETE_EFFECT	INT_VAR	check_globals = 8	match_opcode = 145	END
+	SAY IDENTIFIED_DESC @2000781
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 195			// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 25	 		// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 47	 		// colour index
+	SET location = ared			// location
+	LAUNCH_PATCH_MACRO ~colour~
+END
+BUT_ONLY
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~chan06.itm~) THEN BEGIN		// Drizzt's Mithral Chain Mail
+COPY_EXISTING ~chan06.itm~ ~override~
+PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+	LPF DELETE_EFFECT	INT_VAR	check_globals = 6	match_opcode = 145	END
+	SAY IDENTIFIED_DESC @2000782
+END
+BUT_ONLY
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~wa2robe.itm~) THEN BEGIN	// Robe of Vecna
+COPY_EXISTING ~wa2robe.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+ 	WRITE_ASCII 0x3a ~iclck09v~ #8
+	WRITE_ASCII 0x22 ~4W~
+	LAUNCH_PATCH_MACRO ~clear~
+	SET gradient = 136			// colour index
+	SET location = ablue		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 237	 		// colour index
+	SET location = agrey		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 83	 		// colour index
+	SET location = ared			// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 254	 		// colour index
+	SET location = apink		// location
+	LAUNCH_PATCH_MACRO ~colour~
+	SET gradient = 255	 		// colour index
+	SET location = ateal		// location
+	LAUNCH_PATCH_MACRO ~colour~
+END
+BUT_ONLY
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~wa2plat.itm~) THEN BEGIN 	// Plate of Balduran
+	COPY_EXISTING ~wa2plat.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 254			// colour index
+		SET location = ablue		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 255	 		// colour index
+		SET location = agrey		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 237	 		// colour index
+		SET location = ared			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~helm16.itm~) THEN BEGIN		// Helm of Brilliance
+	COPY_EXISTING ~helm16.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x3a ~ihelm07~ #8
+		WRITE_ASCII 0x58 ~1chelm04~ #8
+		WRITE_ASCII 0x22 ~H5~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~helm21.itm~) THEN BEGIN		// Dragon Helm
+COPY_EXISTING ~helm21.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x58 ~1chelm02~ #8
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 195			// colour index
+		SET location = hgrey		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 195			// colour index
+		SET location = hblue		// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~helm31.itm~) THEN BEGIN		// Helm of the Rock 1
+COPY_EXISTING ~helm31.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x58 ~1chelm03~ #8
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~helm32.itm~) THEN BEGIN		// Helm of the Rock 2
+COPY_EXISTING ~helm32.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x58 ~1chelm03~ #8
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~compon05.itm~) THEN BEGIN	// Roranach Helm
+COPY_EXISTING ~compon05.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 79			// colour index
+		SET location = hgrey		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 25			// colour index
+		SET location = hblue		// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~wa2helm.itm~) THEN BEGIN	// Vahilor's Helm
+COPY_EXISTING ~wa2helm.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x22 ~H3~
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 22			// colour index
+		SET location = hgrey		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 22			// colour index
+		SET location = hpink		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 22			// colour index
+		SET location = hred			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~npchan.itm~) THEN BEGIN		// Corthala Family Armor
+COPY_EXISTING ~npchan.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x22 ~2A~
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 91			// colour index
+		SET location = ablue		// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 184			// colour index
+		SET location = ared			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 232			// colour index
+		SET location = agrey		// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~plat20.itm~) THEN BEGIN		// Blue Dragon Plate
+COPY_EXISTING ~plat20.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+			SET gradient = 96			// colour index
+			SET location = ablue		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 123			// colour index
+			SET location = ared			// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 25			// colour index
+			SET location = agrey		// location
+			LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~npsw04.itm~) THEN BEGIN		// Corthala Family Blade
+COPY_EXISTING ~npsw04.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 96				// colour index
+		SET location = wblue			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 184				// colour index
+		SET location = wred				// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 184				// colour index
+		SET location = wgrey			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~sw1h53.itm~) THEN BEGIN		// Sword of Flame
+COPY_EXISTING ~sw1h53.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_ASCII 0x3a ~isw1h24~ #8
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~rodsword.itm~) THEN BEGIN		// Flaming Long Sword
+COPY_EXISTING ~rodsword.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG  0x3E 0
+		WRITE_ASCII 0x3a ~isw1h24~
+		WRITE_ASCII 0x22 ~FS~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~shld21.itm~) THEN BEGIN		// Dragon Scale Shield
+COPY_EXISTING ~shld21.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 195				// colour index
+		SET location = sblue			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 127				// colour index
+		SET location = spink			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 195				// colour index
+		SET location = sgrey			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~shld25.itm~) AND (MOD_IS_INSTALLED ~1pp.tp2~ (ID_OF_LABEL "1pp.tp2" "1pp_legacy_shields")) BEGIN	// Shield of Harmony
+COPY_EXISTING ~shld25.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+		SET gradient = 68				// colour index
+		SET location = sblue			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 218				// colour index
+		SET location = spink			// location
+		LAUNCH_PATCH_MACRO ~colour~
+		SET gradient = 218				// colour index
+		SET location = sgrey			// location
+		LAUNCH_PATCH_MACRO ~colour~
+	END
+	BUT_ONLY
+	END
+
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck33.itm~) THEN BEGIN		// Semaj's Cloak
+COPY_EXISTING ~clck33.itm~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		LAUNCH_PATCH_MACRO ~clear~
+	END
+	BUT_ONLY
+	END
+	
+
+	// Change Anomen to Male Human Cleric
+
+ACTION_IF (GAME_IS ~bgt~) THEN BEGIN
+ACTION_FOR_EACH creature IN ~anomen6~ ~anomen7~ ~anomen8~ ~anomen9~ ~anomen10~ ~anomen12~ ~vampano~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) AND (MOD_IS_INSTALLED ~infinityanimations.tp2~ ~0~) THEN BEGIN
+		COPY_EXISTING ~%creature%.cre~ ~override~
+		PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG 0x28 ~0x6410~
+        WRITE_BYTE 0x2d 25    	// minor color
+        WRITE_BYTE 0x2e 136  	// major color
+        WRITE_BYTE 0x30 95  	// leather color
+	END
+	BUT_ONLY
+	END
+	END
+	END
+
+ACTION_IF (GAME_IS ~bg2ee eet~) THEN BEGIN
+ACTION_FOR_EACH creature IN ~anomen6~ ~anomen7~ ~anomen8~ ~anomen9~ ~anomen10~ ~anomen12~ ~vampano~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) AND (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-spritesns")) OR (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-sprites")) THEN BEGIN
+		COPY_EXISTING ~%creature%.cre~ ~override~
+		PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN
+		WRITE_LONG 0x28 ~0x5622~
+		WRITE_BYTE 0x2d 25    	// minor color
+		WRITE_BYTE 0x2e 136  	// major color
+		WRITE_BYTE 0x30 95  	// leather color
+	END
+	BUT_ONLY
+	END
+	END
+	END
+
+	
+	// Change Death Tyrants' animation to the proper Death Tyrant one restored by Infinity Animations
+
+ACTION_FOR_EACH creature IN ~behund01~ ~melsum03~ ~rngbeh01~ BEGIN
+	ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) AND MOD_IS_INSTALLED ~infinityanimations.tp2~ ~0~ THEN BEGIN
+		COPY_EXISTING ~%creature%.cre~ ~override~
+		PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN	
+		WRITE_LONG 0x28 ~0x5C00~
+	END
+	BUT_ONLY
+	END
+	END
+
+ACTION_IF (GAME_IS ~bg2ee~) THEN BEGIN
+	ACTION_FOR_EACH creature IN ~behund01~ ~melsum03~ ~rngbeh01~ BEGIN
+		ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+			COPY_EXISTING ~%creature%.cre~ ~override~
+			PATCH_IF (SOURCE_SIZE > 0x71) THEN BEGIN	
+			WRITE_LONG 0x28 ~0x7f46~
+			END
+			BUT_ONLY
+			END
+		ACTION_IF (FILE_EXISTS_IN_GAME ~7f46.ini~) THEN BEGIN
+			COPY_EXISTING ~7f46.ini~ ~override~
+				REPLACE_TEXTUALLY ~ellipse=16~ ~ellipse=32~
+				REPLACE_TEXTUALLY ~personal_space=3~ ~personal_space=5~
+			BUT_ONLY
+		END
+	END
+END
+
+
+	// Replace long sword of Baluran with the bastard sword from BG1
+
+ACTION_IF GAME_IS ~bg2 bgt bg2ee eet~ THEN BEGIN
+	COPY_EXISTING ~WMART2.STO~ ~override~	// Deirdre
+	REMOVE_STORE_ITEM ~WA2S1H~	// long sword of Balduran
+	ADD_STORE_ITEM ~SW1H18~ #0 #0 #0 ~IDENTIFIED~ #1	// bastard sword of Balduran from BG1 (#0 charges, identified, #1 copy available)
+BUT_ONLY
+END
+
+
+	// Change mage robes' appearance (as seen in Mr. Pennyway's Cosmetic Changes)
+
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck12.itm~) AND (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-spritesns")) OR (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-sprites")) THEN BEGIN
+	COPY_EXISTING ~clck12.itm~ ~override~
+		WRITE_ASCII 0x22 ~7A~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END ELSE BEGIN
+	COPY_EXISTING ~clck12.itm~ ~override~
+		WRITE_ASCII 0x22 ~4W~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END
+
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck13.itm~) AND (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-spritesns")) OR (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-sprites")) THEN BEGIN
+	COPY_EXISTING ~clck13.itm~ ~override~
+		WRITE_ASCII 0x22 ~5A~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END ELSE BEGIN
+	COPY_EXISTING ~clck13.itm~ ~override~
+		WRITE_ASCII 0x22 ~2W~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END
+
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck14.itm~) AND (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-spritesns")) OR (MOD_IS_INSTALLED ~nostalgiapack.tp2~ (ID_OF_LABEL "nostalgiapack.tp2" "ac-bg-sprites")) THEN BEGIN
+	COPY_EXISTING ~clck14.itm~ ~override~
+		WRITE_ASCII 0x22 ~6A~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END ELSE BEGIN
+	COPY_EXISTING ~clck14.itm~ ~override~
+		WRITE_ASCII 0x22 ~3W~
+		LAUNCH_PATCH_MACRO ~clear~
+	BUT_ONLY
+END
+
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ || ((GAME_IS ~bgt~) && (MOD_IS_INSTALLED ~1pp.tp2~ (ID_OF_LABEL "1pp.tp2" "1pp_extended_palette_entries_full"))) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck15.itm~) BEGIN	// Robe of the Good Archmagi
+	COPY_EXISTING ~clck15.itm~ ~override~
+		LAUNCH_PATCH_MACRO ~clear~
+			SET gradient = 105			// colour index
+			SET location = ablue		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 90			// colour index
+			SET location = ared			// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 28			// colour index
+			SET location = agrey		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 25			// colour index
+			SET location = ateal		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 105			// colour index
+			SET location = apink		// location
+			LAUNCH_PATCH_MACRO ~colour~
+		BUT_ONLY
+	END
+END
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ || ((GAME_IS ~bgt~) && (MOD_IS_INSTALLED ~1pp.tp2~ (ID_OF_LABEL "1pp.tp2" "1pp_extended_palette_entries_full"))) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck16.itm~) BEGIN	// Robe of the Neutral Archmagi
+COPY_EXISTING ~clck16.itm~ ~override~
+	LAUNCH_PATCH_MACRO ~clear~
+			SET gradient = 135			// colour index
+			SET location = ablue		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 147			// colour index
+			SET location = ared			// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 97			// colour index
+			SET location = agrey		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 147			// colour index
+			SET location = ateal		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 188			// colour index
+			SET location = apink		// location
+			LAUNCH_PATCH_MACRO ~colour~
+		BUT_ONLY
+	END
+END
+
+ACTION_IF GAME_IS ~bgee bg2ee eet~ || ((GAME_IS ~bgt~) && (MOD_IS_INSTALLED ~1pp.tp2~ (ID_OF_LABEL "1pp.tp2" "1pp_extended_palette_entries_full"))) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck17.itm~) BEGIN	// Robe of the Evil Archmagi
+COPY_EXISTING ~clck17.itm~ ~override~
+	LAUNCH_PATCH_MACRO ~clear~
+			SET gradient = 25			// colour index
+			SET location = ablue		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 47			// colour index
+			SET location = ared			// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 97			// colour index
+			SET location = agrey		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 47			// colour index
+			SET location = ateal		// location
+			LAUNCH_PATCH_MACRO ~colour~
+			SET gradient = 136			// colour index
+			SET location = apink		// location
+			LAUNCH_PATCH_MACRO ~colour~
+		BUT_ONLY
+	END
+END
+
+
+	// Add BG1 character sprites to ANIWKSND.2DA
+
+	ACTION_IF (MOD_IS_INSTALLED ~infinityanimations.tp2~ ~0~) && (FILE_EXISTS_IN_GAME ~aniwksnd.2da~) BEGIN
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY array_bg1_anims BEGIN
+		  0x6410 => L_CLERIC_MALE_HUMAN
+		  0x6411 => L_CLERIC_FEMALE_HUMAN
+		  0x6412 => L_CLERIC_MALE_ELF
+		  0x6413 => L_CLERIC_FEMALE_ELF
+		  0x6414 => L_CLERIC_MALE_DWARF
+		  0x6415 => L_CLERIC_FEMALE_DWARF
+		  0x6416 => L_CLERIC_MALE_HALFLING
+		  0x6417 => L_CLERIC_FEMALE_HALFLING
+		  0x6420 => L_FIGHTER_MALE_HUMAN
+		  0x6421 => L_FIGHTER_FEMALE_HUMAN
+		  0x6422 => L_FIGHTER_MALE_ELF
+		  0x6423 => L_FIGHTER_FEMALE_ELF
+		  0x6424 => L_FIGHTER_MALE_DWARF
+		  0x6425 => L_FIGHTER_FEMALE_DWARF
+		  0x6426 => L_FIGHTER_MALE_HALFLING
+		  0x6427 => L_FIGHTER_FEMALE_HALFLING
+		  0x6430 => L_MAGE_MALE_HUMAN
+		  0x6431 => L_MAGE_FEMALE_HUMAN
+		  0x6432 => L_MAGE_MALE_ELF
+		  0x6433 => L_MAGE_FEMALE_ELF
+		  0x6434 => L_MAGE_MALE_DWARF
+		  0x6435 => L_MAGE_FEMALE_DWARF
+		  0x6440 => L_THIEF_MALE_HUMAN
+		  0x6441 => L_THIEF_FEMALE_HUMAN
+		  0x6442 => L_THIEF_MALE_ELF
+		  0x6443 => L_THIEF_FEMALE_ELF
+		  0x6444 => L_THIEF_MALE_DWARF
+		  0x6445 => L_THIEF_FEMALE_DWARF
+		  0x6446 => L_THIEF_MALE_HALFLING
+		  0x6447 => L_THIEF_FEMALE_HALFLING
+		END
+	  
+		ACTION_PHP_EACH array_bg1_anims AS anim_offset => anim_name BEGIN
+		  APPEND ~aniwksnd.2da~ ~%anim_offset%	%anim_name%	TERRAIN	*~ UNLESS ~^%anim_offset%~
+		END
+	  END

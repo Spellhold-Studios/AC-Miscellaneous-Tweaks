@@ -1,0 +1,22 @@
+// Restore EE Original Portraits
+// Restore EE Original Portraits DESIGNATED 44
+
+
+COPY ~miscellaneous/ee_portraits~ ~override~
+
+	COPY_EXISTING_REGEXP GLOB ~.*\.cre~ ~override~
+	READ_STRREF 0x8 name
+	 PATCH_IF (~%name%~ STR_EQ ~Dorn~) BEGIN
+	  WRITE_ASCII 0x34 ~DORNM~ #8	// small portrait
+	  WRITE_ASCII 0x3c ~DORNL~ #8	// large portrait
+     END
+	 PATCH_IF (~%name%~ STR_EQ ~Neera~) BEGIN
+	  WRITE_ASCII 0x34 ~NEERAM~ #8	// small portrait
+	  WRITE_ASCII 0x3c ~NEERAL~ #8	// large portrait
+	 END
+	 PATCH_IF (~%name%~ STR_EQ ~Rasaad~) BEGIN
+	  WRITE_ASCII 0x34 ~RASAADM~ #8	// small portrait
+	  WRITE_ASCII 0x3c ~RASAADL~ #8	// large portrait
+	  WRITE_BYTE 0x2e 47 	// major color
+	 END
+    BUT_ONLY

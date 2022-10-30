@@ -1,0 +1,594 @@
+// EE Character Colors
+// Apply EE colors to joinable NPCs in vanilla games DESIGNATED 3
+
+  // Ajantis
+
+ACTION_FOR_EACH creature IN ~ajanti~ ~ajanti4~ ~ajanti6~ BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+    COPY_EXISTING ~%creature%.cre~ ~override~
+      WRITE_BYTE 0x2c 27 	// metal color
+      WRITE_BYTE 0x2d 107 	// minor color
+      WRITE_BYTE 0x2e 37 	// major color
+      WRITE_BYTE 0x2f 12  // skin color
+      WRITE_BYTE 0x30 92 	// leather color
+      WRITE_BYTE 0x31 28 	// armor color
+      WRITE_BYTE 0x32 81  // hair color
+    BUT_ONLY
+  END
+END
+
+  // Alora
+
+ACTION_FOR_EACH creature IN ~alora~ ~alora6~ BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+    COPY_EXISTING ~%creature%.cre~ ~override~
+      WRITE_BYTE 0x2c 27 	  // metal color
+      WRITE_BYTE 0x2d 33 	  // minor color
+      WRITE_BYTE 0x2e 116 	// major color
+      WRITE_BYTE 0x2f 12    // skin color
+      WRITE_BYTE 0x30 24 	  // leather color
+      WRITE_BYTE 0x31 104 	// armor color
+      WRITE_BYTE 0x32 33    // hair color
+    BUT_ONLY
+  END
+END
+
+  // Branwen
+
+ACTION_FOR_EACH creature IN ~branwe~ ~branwe5~ BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+    COPY_EXISTING ~%creature%.cre~ ~override~
+      WRITE_BYTE 0x2c 32 	  // metal color
+      WRITE_BYTE 0x2d 41 	  // minor color
+      WRITE_BYTE 0x2e 37 	  // major color
+      WRITE_BYTE 0x2f 12    // skin color
+      WRITE_BYTE 0x30 93 	  // leather color
+      WRITE_BYTE 0x31 27 	  // armor color
+      WRITE_BYTE 0x32 3     // hair color
+    BUT_ONLY
+  END
+END
+
+  // Coran
+
+  ACTION_FOR_EACH creature IN ~coran~ ~coran5~ BEGIN
+    ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+      COPY_EXISTING ~%creature%.cre~ ~override~
+        WRITE_BYTE 0x2c 24 	  // metal color
+        WRITE_BYTE 0x2d 60 	  // minor color
+        WRITE_BYTE 0x2e 45 	  // major color
+        WRITE_BYTE 0x2f 12    // skin color
+        WRITE_BYTE 0x30 95 	  // leather color
+        WRITE_BYTE 0x31 24 	  // armor color
+        WRITE_BYTE 0x32 2     // hair color
+      BUT_ONLY
+    END
+  END
+
+    // Dynaheir
+
+  ACTION_FOR_EACH creature IN ~dynahe~ ~dynahe2~ ~dynahe4~ ~dynahe6~ BEGIN
+    ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+      COPY_EXISTING ~%creature%.cre~ ~override~
+        WRITE_BYTE 0x2c 24    // metal color
+        WRITE_BYTE 0x2d 87 	  // minor color
+        WRITE_BYTE 0x2e 117 	// major color
+        WRITE_BYTE 0x2f 114   // skin color
+        WRITE_BYTE 0x30 153 	// leather color
+        WRITE_BYTE 0x31 24 	  // armor color
+        WRITE_BYTE 0x32 94    // hair color
+      BUT_ONLY
+    END
+  END
+
+    // Edwin
+
+    ACTION_FOR_EACH creature IN ~edwin~ ~edwin2~ ~edwin4~ ~edwin6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 80    // metal color
+          WRITE_BYTE 0x2d 80 	  // minor color
+          WRITE_BYTE 0x2e 47   	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 127 	// leather color
+          WRITE_BYTE 0x31 24 	  // armor color
+          WRITE_BYTE 0x32 91    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Eldoth
+
+    ACTION_FOR_EACH creature IN ~eldoth~ ~eldoth5~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 25    // metal color
+          WRITE_BYTE 0x2d 98 	  // minor color
+          WRITE_BYTE 0x2e 87   	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 23   	// leather color
+          WRITE_BYTE 0x31 25 	  // armor color
+          WRITE_BYTE 0x32 0    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Faldorn
+
+    ACTION_FOR_EACH creature IN ~faldor~ ~faldor5~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 54 	  // minor color
+          WRITE_BYTE 0x2e 65   	// major color
+          WRITE_BYTE 0x2f 84    // skin color
+          WRITE_BYTE 0x30 21   	// leather color
+          WRITE_BYTE 0x31 25 	  // armor color
+          WRITE_BYTE 0x32 91    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Garrick
+
+    ACTION_FOR_EACH creature IN ~garric~ ~garric2~ ~garric4~ ~garric6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 25 	  // minor color
+          WRITE_BYTE 0x2e 87   	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 24  	// leather color
+          WRITE_BYTE 0x31 30 	  // armor color
+          WRITE_BYTE 0x32 95    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Imoen
+
+    ACTION_FOR_EACH creature IN ~imoen~ ~imoen1~ ~imoen2~ ~imoen4~ ~imeon6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 25    // metal color
+          WRITE_BYTE 0x2d 151   // minor color
+          WRITE_BYTE 0x2e 132  	// major color
+          WRITE_BYTE 0x2f 157   // skin color
+          WRITE_BYTE 0x30 23  	// leather color
+          WRITE_BYTE 0x31 22 	  // armor color
+          WRITE_BYTE 0x32 4     // hair color
+        BUT_ONLY
+      END
+    END
+
+     // Jaheira
+
+     ACTION_FOR_EACH creature IN ~jaheir~ ~jaheir2~ ~jaheir4~ ~jaheir6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 43    // minor color
+          WRITE_BYTE 0x2e 41  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 24  	// leather color
+          WRITE_BYTE 0x31 21 	  // armor color
+          WRITE_BYTE 0x32 92    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Kagain
+
+    ACTION_FOR_EACH creature IN ~kagain~ ~kagain2~ ~kagain4~ ~kagain6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 97    // metal color
+          WRITE_BYTE 0x2d 49    // minor color
+          WRITE_BYTE 0x2e 39  	// major color
+          WRITE_BYTE 0x2f 85    // skin color
+          WRITE_BYTE 0x30 22  	// leather color
+          WRITE_BYTE 0x31 24 	  // armor color
+          WRITE_BYTE 0x32 6    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Kahlid
+
+    ACTION_FOR_EACH creature IN ~khalid~ ~khalid2~ ~khalid4~ ~khalid6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 28    // metal color
+          WRITE_BYTE 0x2d 24    // minor color
+          WRITE_BYTE 0x2e 8  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 94  	// leather color
+          WRITE_BYTE 0x31 27 	  // armor color
+          WRITE_BYTE 0x32 4    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Kivan
+
+    ACTION_FOR_EACH creature IN ~kivan~ ~kivan4~ ~kivan6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 28    // metal color
+          WRITE_BYTE 0x2d 39    // minor color
+          WRITE_BYTE 0x2e 37  	// major color
+          WRITE_BYTE 0x2f 84    // skin color
+          WRITE_BYTE 0x30 94  	// leather color
+          WRITE_BYTE 0x31 30 	  // armor color
+          WRITE_BYTE 0x32 1    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Minsc
+
+    ACTION_FOR_EACH creature IN ~minsc~ ~minsc2~ ~minsc4~ ~minsc6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 25    // metal color
+          WRITE_BYTE 0x2d 58    // minor color
+          WRITE_BYTE 0x2e 60  	// major color
+          WRITE_BYTE 0x2f 84    // skin color
+          WRITE_BYTE 0x30 22  	// leather color
+          WRITE_BYTE 0x31 93 	  // armor color
+          WRITE_BYTE 0x32 84    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Montaron
+
+    ACTION_FOR_EACH creature IN ~montar~ ~montar2~ ~montar4~ ~montar6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 60    // minor color
+          WRITE_BYTE 0x2e 21  	// major color
+          WRITE_BYTE 0x2f 10    // skin color
+          WRITE_BYTE 0x30 22  	// leather color
+          WRITE_BYTE 0x31 29 	  // armor color
+          WRITE_BYTE 0x32 91    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Quayle
+
+    ACTION_FOR_EACH creature IN ~quayle~ ~quayle4~ ~quayle6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 66    // minor color
+          WRITE_BYTE 0x2e 45  	// major color
+          WRITE_BYTE 0x2f 8     // skin color
+          WRITE_BYTE 0x30 23  	// leather color
+          WRITE_BYTE 0x31 64 	  // armor color
+          WRITE_BYTE 0x32 110   // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Safana
+
+    ACTION_FOR_EACH creature IN ~safana~ ~safana4~ ~safana6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 30    // metal color
+          WRITE_BYTE 0x2d 91    // minor color
+          WRITE_BYTE 0x2e 92  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 23  	// leather color
+          WRITE_BYTE 0x31 27 	  // armor color
+          WRITE_BYTE 0x32 4    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Shar-Teel
+
+    ACTION_FOR_EACH creature IN ~shartd~ ~sharte~ ~sharte4~ ~sharte6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 99    // metal color
+          WRITE_BYTE 0x2d 28    // minor color
+          WRITE_BYTE 0x2e 27  	// major color
+          WRITE_BYTE 0x2f 84    // skin color
+          WRITE_BYTE 0x30 21  	// leather color
+          WRITE_BYTE 0x31 99 	  // armor color
+          WRITE_BYTE 0x32 3    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Skie
+
+    ACTION_FOR_EACH creature IN ~skie~ ~skie6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 25    // metal color
+          WRITE_BYTE 0x2d 45    // minor color
+          WRITE_BYTE 0x2e 66  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 99  	// leather color
+          WRITE_BYTE 0x31 21 	  // armor color
+          WRITE_BYTE 0x32 0    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Tiax
+
+    ACTION_FOR_EACH creature IN ~tiax~ ~tiaxd~ ~tiax4~ ~tiax6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 24    // metal color
+          WRITE_BYTE 0x2d 46    // minor color
+          WRITE_BYTE 0x2e 43  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 22  	// leather color
+          WRITE_BYTE 0x31 42 	  // armor color
+          WRITE_BYTE 0x32 91    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Viconia
+
+    ACTION_FOR_EACH creature IN ~viconi~ ~viconi4~ ~viconi6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 86    // minor color
+          WRITE_BYTE 0x2e 41  	// major color
+          WRITE_BYTE 0x2f 182   // skin color
+          WRITE_BYTE 0x30 21  	// leather color
+          WRITE_BYTE 0x31 169 	// armor color
+          WRITE_BYTE 0x32 79    // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Xan
+
+    ACTION_FOR_EACH creature IN ~xan~ ~xan4~ ~xan6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 141    // metal color
+          WRITE_BYTE 0x2d 118    // minor color
+          WRITE_BYTE 0x2e 45  	 // major color
+          WRITE_BYTE 0x2f 12     // skin color
+          WRITE_BYTE 0x30 18   	 // leather color
+          WRITE_BYTE 0x31 25 	   // armor color
+          WRITE_BYTE 0x32 0      // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Xzar
+
+    ACTION_FOR_EACH creature IN ~xzar~ ~xzar2~ ~xzar4~ ~xzar6~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 104    // metal color
+          WRITE_BYTE 0x2d 107    // minor color
+          WRITE_BYTE 0x2e 134  	 // major color
+          WRITE_BYTE 0x2f 84     // skin color
+          WRITE_BYTE 0x30 182  	 // leather color
+          WRITE_BYTE 0x31 27 	   // armor color
+          WRITE_BYTE 0x32 94     // hair color
+        BUT_ONLY
+      END
+    END
+
+    // Yeslick
+
+    ACTION_FOR_EACH creature IN ~yeslic~ ~yeslid~ ~yeslic5~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 27    // metal color
+          WRITE_BYTE 0x2d 42    // minor color
+          WRITE_BYTE 0x2e 39  	// major color
+          WRITE_BYTE 0x2f 85    // skin color
+          WRITE_BYTE 0x30 9    	// leather color
+          WRITE_BYTE 0x31 29 	  // armor color
+          WRITE_BYTE 0x32 92    // hair color
+        BUT_ONLY
+      END
+      
+      // Aerie
+
+     ACTION_FOR_EACH creature IN ~aerie~ ~aerie6~ ~aerie7~ ~aerie9~ ~aerie10~ ~aerie11~ ~aerie12~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+        COPY_EXISTING ~%creature%.cre~ ~override~
+          WRITE_BYTE 0x2c 97    // metal color
+          WRITE_BYTE 0x2d 105    // minor color
+          WRITE_BYTE 0x2e 141  	// major color
+          WRITE_BYTE 0x2f 12    // skin color
+          WRITE_BYTE 0x30 141  	// leather color
+          WRITE_BYTE 0x31 25 	  // armor color
+          WRITE_BYTE 0x32 25    // hair color
+        BUT_ONLY
+      END
+    END
+
+      // Anomen
+
+      ACTION_FOR_EACH creature IN ~anomen~ ~anomen6~ ~anomen7~ ~anomen9~ ~anomen10~ ~anomen8~ ~anomen12~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 28    // metal color
+            WRITE_BYTE 0x2d 87    // minor color
+            WRITE_BYTE 0x2e 59  	// major color
+            WRITE_BYTE 0x2f 84    // skin color
+            WRITE_BYTE 0x30 93  	// leather color
+            WRITE_BYTE 0x31 110   // armor color
+            WRITE_BYTE 0x32 2     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Cernd
+
+      ACTION_FOR_EACH creature IN ~cernd10~ ~cernd13~ ~cernd12~ ~cernd13b~ ~cernd14~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 0    // metal color
+            WRITE_BYTE 0x2d 134    // minor color
+            WRITE_BYTE 0x2e 168  	// major color
+            WRITE_BYTE 0x2f 85    // skin color
+            WRITE_BYTE 0x30 6  	// leather color
+            WRITE_BYTE 0x31 146   // armor color
+            WRITE_BYTE 0x32 93     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Haer'Dalis
+
+      ACTION_FOR_EACH creature IN ~haer10~ ~haer11~ ~haer13~ ~haer15~ ~haer19~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 25    // metal color
+            WRITE_BYTE 0x2d 66    // minor color
+            WRITE_BYTE 0x2e 103  	// major color
+            WRITE_BYTE 0x2f 84    // skin color
+            WRITE_BYTE 0x30 99  	// leather color
+            WRITE_BYTE 0x31 25   // armor color
+            WRITE_BYTE 0x32 18     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Jan
+
+      ACTION_FOR_EACH creature IN ~jan10~ ~jan12~ ~jan15~ ~jan11~ ~jan8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 101    // metal color
+            WRITE_BYTE 0x2d 71    // minor color
+            WRITE_BYTE 0x2e 35  	// major color
+            WRITE_BYTE 0x2f 84    // skin color
+            WRITE_BYTE 0x30 94  	// leather color
+            WRITE_BYTE 0x31 96   // armor color
+            WRITE_BYTE 0x32 0     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Keldorn
+
+      ACTION_FOR_EACH creature IN ~keldor10~ ~keldor12~ ~keldor14~ ~keldor9~ ~keldor8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 197    // metal color
+            WRITE_BYTE 0x2d 63    // minor color
+            WRITE_BYTE 0x2e 96  	// major color
+            WRITE_BYTE 0x2f 12    // skin color
+            WRITE_BYTE 0x30 22  	// leather color
+            WRITE_BYTE 0x31 170   // armor color
+            WRITE_BYTE 0x32 6     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Korgan
+
+      ACTION_FOR_EACH creature IN ~korgan11~ ~korgan12~ ~korgan15~ ~korgan9~ ~korgan8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 25    // metal color
+            WRITE_BYTE 0x2d 42    // minor color
+            WRITE_BYTE 0x2e 48  	// major color
+            WRITE_BYTE 0x2f 85    // skin color
+            WRITE_BYTE 0x30 93  	// leather color
+            WRITE_BYTE 0x31 102   // armor color
+            WRITE_BYTE 0x32 97     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Mazzy
+
+      ACTION_FOR_EACH creature IN ~mazzy11~ ~mazzy12~ ~mazzy15~ ~mazzy9~ ~mazzy8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 102    // metal color
+            WRITE_BYTE 0x2d 29    // minor color
+            WRITE_BYTE 0x2e 128  	// major color
+            WRITE_BYTE 0x2f 12    // skin color
+            WRITE_BYTE 0x30 100  	// leather color
+            WRITE_BYTE 0x31 25   // armor color
+            WRITE_BYTE 0x32 4     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Nalia
+
+      ACTION_FOR_EACH creature IN ~nalia10~ ~nalia11~ ~nalia13~ ~nalia15~ ~nalia18~ ~nalia8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 97    // metal color
+            WRITE_BYTE 0x2d 57    // minor color
+            WRITE_BYTE 0x2e 172  	// major color
+            WRITE_BYTE 0x2f 12    // skin color
+            WRITE_BYTE 0x30 57  	// leather color
+            WRITE_BYTE 0x31 48   // armor color
+            WRITE_BYTE 0x32 2     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Valygar
+
+      ACTION_FOR_EACH creature IN ~valyg9~ ~valyg11~ ~valyg12~ ~valyg14~ ~valyg8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 27    // metal color
+            WRITE_BYTE 0x2d 2    // minor color
+            WRITE_BYTE 0x2e 90  	// major color
+            WRITE_BYTE 0x2f 92    // skin color
+            WRITE_BYTE 0x30 24  	// leather color
+            WRITE_BYTE 0x31 28   // armor color
+            WRITE_BYTE 0x32 0     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Yoshimo
+
+      ACTION_FOR_EACH creature IN ~yoshi10~ ~yoshi11~ ~yoshi12~ ~yoshi7~ ~yoshi8~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 27    // metal color
+            WRITE_BYTE 0x2d 81    // minor color
+            WRITE_BYTE 0x2e 144  	// major color
+            WRITE_BYTE 0x2f 162    // skin color
+            WRITE_BYTE 0x30 22  	// leather color
+            WRITE_BYTE 0x31 29   // armor color
+            WRITE_BYTE 0x32 183     // hair color
+          BUT_ONLY
+        END
+      END
+
+      // Sarevok
+
+      ACTION_FOR_EACH creature IN ~sarevok~ BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%creature%.cre~) THEN BEGIN
+          COPY_EXISTING ~%creature%.cre~ ~override~
+            WRITE_BYTE 0x2c 96    // metal color
+            WRITE_BYTE 0x2d 80    // minor color
+            WRITE_BYTE 0x2e 136  	// major color
+            WRITE_BYTE 0x2f 114    // skin color
+            WRITE_BYTE 0x30 0  	// leather color
+            WRITE_BYTE 0x31 25   // armor color
+            WRITE_BYTE 0x32 114     // hair color
+          BUT_ONLY
+        END
+      END
+END
