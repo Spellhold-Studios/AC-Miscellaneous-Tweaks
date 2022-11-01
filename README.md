@@ -139,5 +139,5 @@ I would also like to extend my gratitude to Cuv, Miloch, CamDawg, Troodon80, and
 Finally, thanks to Beamdog for reviving interest in these games, birthing a new generation of modders while drawing veterans back, and still patching the Enhanced Editions almost ten years after their initial release.
 
 ## Version History
-#### 1.24 (22 August 2022)
+**1.24 (22 August 2022)**
 - Initial GitHub release
