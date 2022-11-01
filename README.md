@@ -6,7 +6,7 @@
 **[Download](https://github.com/SpellholdStudios/AC-Miscellaneous-Tweaks/releases) | [Website](http://www.shsforums.net/) | [Forum](http://www.shsforums.net/topic/61094-acs-miscellaneous-tweaks/)**
 
 ## Overview
-AC's Miscellaneous Tweaks is a motely collection of stuff I made for personal use that grew overtime, in no small part thanks to the help I received from the modding community. As everything in this mod is tailored to my preferences, I'm not sure how much demand there's going to be for it—but if you're among the few whose interest is piqued, I hope you'll enjoy it!
+AC's Miscellaneous Tweaks is a motley collection of stuff I made for personal use that grew overtime, in no small part thanks to the help I received from the modding community. As everything in this mod is tailored to my preferences, I'm not sure how much demand there's going to be for it—but if you're among the few whose interest is piqued, I hope you'll enjoy it!
 
 ## Content
 ### Miscellaneous Tweaks
@@ -139,5 +139,5 @@ I would also like to extend my gratitude to Cuv, Miloch, CamDawg, Troodon80, and
 Finally, thanks to Beamdog for reviving interest in these games, birthing a new generation of modders while drawing veterans back, and still patching the Enhanced Editions almost ten years after their initial release.
 
 ## Version History
-### 1.24 (22 August 2022)
+#### 1.24 (22 August 2022)
 - Initial GitHub release
