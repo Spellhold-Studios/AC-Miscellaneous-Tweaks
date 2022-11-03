@@ -40,7 +40,7 @@ Not everyone will know that ahead of Baldur's Gate: Enhanced Edition's release, 
 
 Rasaad was wearing red, which looked spiffy but was probably changed to make it easier to see when he's injured.
 
-Dorn was given an unexplicable bluish tint right before release, which always baffled me because it looked so much better without.
+Dorn was given an inexplicable bluish tint right before release, which always baffled me because it looked so much better without.
 
 Neera was given a pink tint, which made her portrait less ... loud. But the loud version fits BG1 portraits (and her personality) better in my opinion.
 
@@ -80,7 +80,7 @@ Similarly, Infinity Animations gives the Amnian Guard sprite from BG2 to the Amn
 The component requires Infinity Animations as it's coded to work specifically with BG1 sprites.
 
 ### Dragon Breath Fix
-The implementation of dragons' breath weapons in BG2 is highly incosistent, as some are set as magical attacks and others aren't, and most qualify as spells of the "generalist" school, which means generalist mages and sorcers (and wild mages if you're using ToBEx AfterLife) get an unduly +2 bonus to saving throws against them. Blue dragons are a whole different chapter, as their breath weapon is a repurposed Chain Lightning spell so pretty much everything about it is wrong.
+The implementation of dragons' breath weapons in BG2 is highly incosistent, as some are set as magical attacks and others aren't, and most qualify as spells of the "generalist" school, which means generalist mages and sorcerers (and wild mages if you're using ToBEx AfterLife) get an unduly +2 bonus to saving throws against them. Blue dragons are a whole different chapter, as their breath weapon is a repurposed Chain Lightning spell so pretty much everything about it is wrong.
 
 This component addresses all of these problems by assigning school: NONE and removing the "magical attack" flag from all breath weapons. It also fixes the casting sound and animation on the blue dragon's breath weapon.
 
