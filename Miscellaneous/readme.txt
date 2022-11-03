@@ -2,7 +2,7 @@ AC'S MISCELLANEOUS TWEAKS
 
 OVERVIEW:
 
-AC's Miscellaneous Tweaks is a motely collection of stuff I made for personal use that grew overtime, in no small part thanks to the help I received from the modding community. As everything in this mod is tailored to my preferences, I'm not sure how much demand there's going to be for it—but if you're among the few whose interest is piqued, I hope you'll enjoy it!
+AC's Miscellaneous Tweaks is a motley collection of stuff I made for personal use that grew overtime, in no small part thanks to the help I received from the modding community. As everything in this mod is tailored to my preferences, I'm not sure how much demand there's going to be for it—but if you're among the few whose interest is piqued, I hope you'll enjoy it!
 
 
 CONTENT:
