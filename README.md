@@ -3,7 +3,9 @@
 
 **Author: [Andrea C.](http://www.shsforums.net/user/7164-andrea-c/)**
 
-**[Download](https://github.com/SpellholdStudios/AC-Miscellaneous-Tweaks/releases) | [Website](http://www.shsforums.net/) | [Forum](http://www.shsforums.net/topic/61094-acs-miscellaneous-tweaks/)**
+**[Download](https://github.com/SpellholdStudios/AC-Miscellaneous-Tweaks/releases)**
+
+**[Forum](http://www.shsforums.net/topic/61629-acs-miscellaneous-tweaks/)**
 
 ## Overview
 AC's Miscellaneous Tweaks is a motley collection of stuff I made for personal use that grew overtime, in no small part thanks to the help I received from the modding community. As everything in this mod is tailored to my preferences, I'm not sure how much demand there's going to be for it—but if you're among the few whose interest is piqued, I hope you'll enjoy it!
