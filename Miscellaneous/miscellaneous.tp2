@@ -6,15 +6,7 @@
 
 BACKUP ~weidu_external/backup/miscellaneous~
 AUTHOR ~ac86public@gmail.com~
-VERSION ~v1.24~
-
-MODDER setup_tra        ~FAIL~
-       area_variables   ~FAIL~
-       missing_extern   ~FAIL~
-       missing_resref   ~FAIL~
-       ict2_actions     ~FAIL~
-       missing_eval     ~FAIL~
-       overwriting_file ~NONE~
+VERSION ~v1.25~
 
 LANGUAGE ~English~ ~en_US~ ~Miscellaneous/tra/en_US/setup.tra~
 
