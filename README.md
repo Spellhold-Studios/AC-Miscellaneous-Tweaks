@@ -65,7 +65,7 @@ This mod was born as a disparate assortment of tweaks and changes I wanted for m
 
 - Andrea C.
 
-**Acknowledgements**  
+**Special Acknowledgements**  
 
 - This mod would not exist without the generous, friendly help of people like skellytz (who single-handedly coded the soundset component), kjeron, Gamemacik, Jarno Mikkola, Insomniator, Graion Dilach (who was instrumental in making the SoD soundset component work), and ALIEN.
 - I would also like to extend my gratitude to Cuv, Miloch, CamDawg, Troodon80, and Argent77 for helping me with advice and coaching when I moved my first steps into modding and several times thereafter.
